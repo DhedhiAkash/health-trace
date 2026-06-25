@@ -67,6 +67,24 @@ To build, compile, and run Health Trace locally, your environment must satisfy t
 
 ---
 
+## 📦 Direct APK Download (Instant Testing)
+
+Link: "assets/apk/app-release.apk"
+
+To make it as seamless as possible for hiring managers and engineering teams to evaluate this project without needing a local Flutter environment configured, a pre-compiled, release-optimized standalone binary has been uploaded directly to this repository.
+
+### How to Install and Test:
+1. **Download the Asset:** Navigate to the root directory of this repository and click on **`app-release.apk`** (or download it directly from the **Releases** tab on the right sidebar).
+2. **Sideload to Device:** Transfer the downloaded `.apk` file to your physical Android device running Android 11 (API 30) or higher.
+3. **Install:** Open your phone's File Manager, locate the APK, and install it *(Ensure "Allow installation from unknown sources" is checked in your system settings if prompted)*.
+4. **Prerequisite Check:** Ensure your device has the official **Google Health Connect** framework installed from the Play Store to experience the live native lifecycle sync loops!
+
+> **Note for reviewers:** On initial launch, the app will smoothly load the **Orange Simulation Layer** to show how the charts behave. You can use Google’s official *Health Connect Toolbox* app to inject real background telemetry logs and see the app dynamically trigger its **Density Gating Threshold**, instantly snapping the interface into pure tracking mode.
+
+
+---
+
+
 ## 💻 Tech Stack & Dependencies
 
 The production architecture is kept lean, relying exclusively on heavily maintained, industry-standard packages to prevent dependency conflicts:
@@ -87,3 +105,6 @@ dependencies:
 
   # Native Bridges for Android Health Connect APIs
   health: ^10.0.0
+
+'''
+
